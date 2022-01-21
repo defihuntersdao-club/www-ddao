@@ -1,0 +1,382 @@
+/* 
+// 1. General
+*/
+
+
+a {
+    text-decoration: none !important;
+    outline: none;
+}
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+body {
+    font-family: $font-primary;
+    color: $dark;
+    background: $body-bg;
+    font-weight: 500;
+}
+p {
+    line-height: 1.8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-secondary;
+    font-weight: 700;
+}
+.section p {
+    margin: 0 0 35px 0;
+}
+.section p:last-child {
+    margin-bottom: 0;
+}
+.section b {
+    font-weight: bold;
+}
+.section img {
+    display: block;
+    max-width: 100%;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.section-title {
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+.section-subtitle {
+    font-size: 22px;
+}
+.about-row {
+    align-items: center;
+}
+.about-col-2 {
+    width: 400px;
+    margin-left: auto;
+}
+.about-col-1 {
+    width: calc(100% - 450px);
+}
+.about-text,
+.about-margintext {
+    font-size: 20px;
+    line-height: 1.5;
+}
+.about-margintext {
+    border-left: 5px solid $blue;
+    padding: 0 0 0 35px;
+    margin: 40px 0;
+    color: $blue;
+}
+.info-box {
+    background: #fbfbfb;
+    border: 15px solid $blue;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 18px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.17);
+    color: $dark;
+}
+.token-section {
+    background: #1B1B21;
+    color: #fff;
+}
+.token-image img {
+    width: 536px;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+.token-col-2 {
+    margin-left: auto;
+}
+.token-col-1 {
+    width: calc(100% - 585px);
+}
+.token-items-title {
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+}
+.token-item {
+    margin-bottom: 8px;
+}
+.token-item:last-child {
+    margin-bottom: 0;
+}
+.token-item-color {
+    width: 18px;
+    height: 18px;
+    border-radius: 50px;
+}
+.token-item-text {
+    font-size: 18px;
+    line-height: 1.5;
+    width: calc(100% - 30px);
+    margin-left: auto;
+    position: relative;
+    top: -4px;
+}
+.token-item-color-1 {
+    background: #5642FB;
+}
+.token-item-color-2 {
+    background: #E7B52E;
+}
+.token-item-color-3 {
+    background: #E75B4E;
+}
+.token-item-color-4 {
+    background: #F4268C;
+}
+.token-item-color-5 {
+    background: #5AB3F5;
+}
+.token-item-color-6 {
+    background: #55AE51;
+}
+.token-item-color-7 {
+    background: #A70958;
+}
+.stats-row {
+    margin: 90px -22px 0 -22px;
+}
+.stats-col {
+    width: 50%;
+    padding: 0 22px;
+}
+.stats-title {
+    padding: 15px 15px;
+    text-align: center;
+    font-size: 19px;
+    border-radius: 10px;
+    margin-bottom: 33px;
+}
+.stats-title > span {
+    display: block;
+    font-size: 33px;
+    font-weight: bold;
+}
+.stats-title-1 {
+    background: #441577;
+}
+.stats-title-2 {
+    background: #7A1258;
+}
+.stats-text {
+    font-size: 20px;
+    text-align: center;
+}
+.stats-info {
+    margin-top: 20px;
+    font-size: 14px;
+    border: 10px solid #7A1258;
+}
+.stats-blue {
+    justify-content: center;
+    margin-top: 25px;
+}
+.stats-blue > span {
+    background: #4216B6;
+    font-size: 18px;
+    padding: 8px 25px;
+    border-radius: 10px;
+}
+.stats-blue > span > b {
+    font-size: 22px;
+}
+.acc-row {
+    align-items: center;
+}
+.acc-image img {
+    width: 357px;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+.acc-col-2 {
+    width: calc(100% - 450px);
+    margin-left: auto;
+}
+.acc-text {
+    font-size: 22px;
+}
+.road-section {
+    background: #f2f2f2;
+}
+.road-col-1 {
+    width: calc(100% - 330px);
+}
+.road-image img {
+    width: 280px;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+.road-items {
+    margin: -25px -15px;
+}
+.road-item {
+    width: calc(100% / 2);
+    padding: 25px 15px;
+}
+.road-item > span {
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+}
+.road-item > ul > li {
+    font-size: 18px;
+}
+.cs-section {
+    background: linear-gradient(to bottom right, #1E242D, #741F4C);
+    color: #fff;
+}
+.cs-title {
+    text-align: center;
+}
+.cs-email {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.cs-email > a {
+    color: #fff;
+    text-decoration: none!important;
+    transition: 300ms;
+}
+.cs-email > a:hover {
+    opacity: 0.7;
+}
+.cs-links {
+    margin: -8px;
+    justify-content: center;
+}
+.cs-links-item {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50px;
+    font-size: 24px;
+    line-height: 52px;
+    text-align: center;
+    margin: 8px;
+    transition: 300ms;
+    color: $dark;
+}
+.cs-links-item:hover {
+    transform: scale(0.89);
+}
+.side.back {
+    background: transparent!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    opacity: 0;
+}
+.side.front {
+    opacity: 1;
+    transform: none;
+}
+.side.back svg {
+    width: 85px;
+    height: 85px;
+}
+.b-logo {
+    width: 100%;
+    border-radius: 10px;
+    margin: 0!important;
+}
+.nav-logo {
+    width: 42px;
+    border-radius: 10px;
+}
+#home {
+    /*background: linear-gradient(to right, blue, pink)!important;*/
+    background: linear-gradient(to bottom right, #1E242D, #741F4C)!important;
+}
+.navbar-custom {
+    background: #fff!important;
+}
+.card {
+    border-radius: 10px;
+    background: none!important;
+}
+.side {
+    border-radius: 20px!important;
+}
+.connect-btn {
+    background: #30377F!important;
+}
+.cards-wrapper {
+    margin: 20px 0;
+}
+#home .row {
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+@media(max-width: 991px) {
+    .about-col,
+    .token-col,
+    .stats-col,
+    .acc-col,
+    .road-col {
+        width: 100%;
+    }
+    .about-col-1,
+    .token-col-1,
+    .stats-col-1,
+    .acc-col-1,
+    .road-col-1 {
+        margin-bottom: 33px;
+    }
+}
+@media(max-width: 767px) {
+    .section-title {
+        font-size: 43px;
+    }
+    .section-subtitle,
+    .about-text,
+    .about-margintext,
+    .info-box,
+    .token-item-text,
+    .stats-title,
+    .stats-text,
+    .acc-text,
+    .road-item > ul > li {
+        font-size: 16px;
+    }
+    .stats-title > span {
+        font-size: 24px;
+    }
+    .cs-email {
+        font-size: 20px;
+    }
+    .section {
+        padding: 44px 0;
+    }
+    .road-item {
+        width: 100%;
+        padding: 10px;
+    }
+    .road-items {
+        margin: -10px;
+    }
+    .token-items-title {
+        font-size: 27px;
+    }
+}
+@media(max-width: 400px) {
+    .section-title {
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+}

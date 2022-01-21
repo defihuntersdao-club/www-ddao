@@ -1,0 +1,32 @@
+[
+    {
+      "title": "Seed",
+      "price": "",
+      "description": [],
+      "button": "Claim"
+    },
+    {
+      "title": "Private 1",
+      "price": "",
+      "description": [],
+      "button": "Claim"
+    },
+    {
+      "title": "Private 2",
+      "price": "",
+      "description": [],
+      "button": "Claim"
+    },
+    {
+      "title": "DeFi Yield",
+      "price": "",
+      "description": ["Coming soon"],
+      "button": ""
+    },
+    {
+      "title": "COMMON",
+      "price": "",
+      "description": ["Coming soon"],
+      "button": ""
+    }
+]
