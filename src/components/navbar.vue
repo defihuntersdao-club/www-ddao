@@ -6,7 +6,7 @@ import {
   LinkedinIcon,
   ArrowRightCircleIcon
 } from "vue-feather-icons";
-
+import ConnectWallet from "@/components/connect-wallet";
 export default {
   props: {
     navbarcolor: {
@@ -19,7 +19,8 @@ export default {
     TwitterIcon,
     InstagramIcon,
     LinkedinIcon,
-    ArrowRightCircleIcon
+    ArrowRightCircleIcon,
+    ConnectWallet
   },
   mounted: () => {
     window.onscroll = function() {
@@ -71,7 +72,7 @@ export default {
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mx-auto navbar-center" id="mySidenav" v-scroll-spy-active>
         </ul>
-            <a href="javascript: void(0);" class="btn btn-primary mr-2 connect-btn">Connect Wallet</a>
+        <ConnectWallet></ConnectWallet>
       </div>
     </div>
     <b-modal id="login-modal" hide-header hide-footer centered>

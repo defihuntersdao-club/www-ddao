@@ -2,14 +2,10 @@
   <div>
     <Navbar />
     <div v-scroll-spy>
-      <!-- Hero Start -->
-      <section
-          class="hero-1-bg"
-          id="home"
-      >
+      <section class="hero-1-bg" id="home">
         <div class="container">
           <div class="row align-items-center justify-content-center">
-            <div class="col-lg-4" v-for="item in items" :key="item.title">
+            <div class="col-lg-4" v-for="(item, index) in items" :key="item.title">
               <div class="cards-wrapper">
                 <div class="draggable">
                   <div class="card-block">
@@ -29,7 +25,20 @@
                           <ul class="list-unstyled pricing-item mb-4">
                             <li class="text-muted" v-for="description in item.description">{{ description }}</li>
                           </ul>
-                          <a href="javascript: void(0);" class="btn btn-outline-primary pr-btn" v-if="item.button.length">Claim</a>
+                            <template v-if="account==null">
+                              <div style="margin-top: 250px;">
+                                <button class="btn btn-outline-primary pr-btn" @click="clickOpenModal()">Connect</button>
+                              </div>
+                            </template>
+                            <template v-else>
+                              <div style="margin-top: 150px;">
+                                <p v-if="claimEnables[index].claimEnableDefault==true">Claim enable: Yes</p>
+                                <p v-else>Claim enable: No</p>
+                                <p v-if="claimEnables[index].claimAmountDefault>0">Claim amount: {{claimAmounts[index].claimAmountDefault/1000000000000000000}}</p>
+                                <p v-else>Claim amount: 0</p>
+                                <button class="btn btn-outline-primary pr-btn" @click="clickClaim(item)" v-if="item.button.length">Claim</button>
+                              </div>
+                            </template>
                           <div class="mt-4">
                             <div class="hero-bottom-img">
                               <img
@@ -49,7 +58,6 @@
           </div>
         </div>
       </section>
-      <!-- Hero End -->
       <Features />
     </div>
   </div>
@@ -66,6 +74,8 @@ import Footer from "@/components/footer";
 
 import itemsJson from '@/assets/example.json';
 
+import {mapActions, mapGetters} from "vuex"
+
 export default {
   data() {
     return {
@@ -76,7 +86,17 @@ export default {
     }
   },
   components: { Navbar, Service, Features, Pricing, Blog, Contact, Footer },
+  computed: {
+    ...mapGetters(['account', 'claimEnables','claimAmounts']),
+  },
   methods: {
+    ...mapActions(['connectionModal', 'txClaim', 'getClaimCheckEnable', 'getClaimCheckAmount']),
+    clickOpenModal: function () {
+      this.connectionModal()
+    },
+    clickClaim: function (item) {
+      this.txClaim({ contractAddr: item.claimAddress, contractAbi: item.claimABI })
+    },
     flipBlock1: function(){
       this.flipClass1 = 'flip';
     },
@@ -95,6 +115,36 @@ export default {
     flipOutBlock3: function(){
       this.flipClass3 = '';
     }
+  },
+  watch:{
+    claimEnables: {
+      deep: true,
+      handler() {
+        var wrapItems = this.items;
+        const gettClaimCheckAmount = this.getClaimCheckAmount;
+        this.claimEnables.forEach(function(item, index) {
+          gettClaimCheckAmount({ index: index, contractAddr: wrapItems[index].claimAddress, contractAbi: wrapItems[index].claimABI })
+        })
+      }
+    },
+    claimAmounts: {
+      deep: true,
+      handler() {
+        this.claimAmounts
+      }
+    },
+    account() {
+      if (this.account != null) {
+        var index;
+        for (index = 0; index < this.items.length; ++index) {
+          if (this.items[index].button == 'Claim') {
+            this.getClaimCheckEnable({ index: index, contractAddr: this.items[index].claimAddress, contractAbi: this.items[index].claimABI })
+          }
+        }
+      }
+    },
+  },
+  mounted() {
   }
 };
 </script>
