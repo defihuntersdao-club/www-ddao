@@ -61,6 +61,7 @@ export default {
       <a class="navbar-brand logo" href="/">
         <img :src="require('@/assets/images/logo.gif')" alt="" class="nav-logo">
       </a>
+      <!--
       <button
         class="navbar-toggler"
         type="button"
@@ -69,11 +70,8 @@ export default {
       >
         <i class="mdi mdi-menu"></i>
       </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mx-auto navbar-center" id="mySidenav" v-scroll-spy-active>
-        </ul>
-        <ConnectWallet></ConnectWallet>
-      </div>
+      -->
+      <ConnectWallet></ConnectWallet>
     </div>
     <b-modal id="login-modal" hide-header hide-footer centered>
       <div class="text-center">

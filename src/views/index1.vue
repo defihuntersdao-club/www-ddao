@@ -153,7 +153,7 @@ export default {
 .cards-wrapper {
   width: 100%;
   position: relative;
-  left: 50%;
+  left: 53%;
   top: 50%;
   transform: translate(-50%, 10%);
   display: flex;
