@@ -12,9 +12,14 @@ while($f = readdir($h))
     if($t[extension]=="js")
     {
 	$a = file_get_contents($tf);
-	$t2 = $a[0];
+	$t3 = explode("\n",$a);
+	$t2 = $t3[0];
 	$t2 = trim($t2);
-	if($t2 == "// 0")continue;
+	//print "T2:".$t2."\n";
+	if($t2 == "// 0")
+	{
+	    continue;
+	}
 	$txt .= "// =========== $t[filename] =========\n";
 	$txt .= $a."\n";
     }
