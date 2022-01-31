@@ -20,7 +20,7 @@
 
 <body class="dark-theme">
 	<header>
-		<div class="top-info">This project is beta. DYOR</div>
+		<div class="top-info" id=upper_informer>This project is beta. DYOR</div>
 		<div class="top-header d-flex">
 			<div class="top-header__logo">
 				<a href="#">
