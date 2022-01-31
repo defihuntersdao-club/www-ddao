@@ -1,1 +1,1 @@
-alert('a test');
+console.log('js aggregator test');
