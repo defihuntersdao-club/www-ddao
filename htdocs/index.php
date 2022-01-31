@@ -29,8 +29,8 @@
 			</div>
 
 			<div class="top-tabs">
-				<a href="#" class="top-tabs__tab tab-1">Claim</a>
-				<a href="#" class="ttop-tabs__tab tab-2 active">Pool</a>
+				<a href="#/claim" class="top-tabs__tab tab-1">Claim</a>
+				<a href="#/pool" class="ttop-tabs__tab tab-2 active">Pool</a>
 			</div>
 
 
