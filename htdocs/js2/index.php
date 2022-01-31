@@ -20,9 +20,15 @@ while($f = readdir($h))
 	{
 	    continue;
 	}
+	$txt = "";
 	$txt .= "// =========== $t[filename] =========\n";
 	$txt .= $a."\n";
+	$txt2[$t[filename]] = $txt;
+
     }
 }
+
+ksort($txt2);
+$txt = implode("\n",$txt2);
 print $txt;
 ?>

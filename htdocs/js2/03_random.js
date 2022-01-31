@@ -5,4 +5,4 @@ function update_upper_line()
     var x = document.getElementById('upper_line');
     x.innerHTML = t;
 }
-setInterval(2000,update_upper_line);
+setInterval(update_upper_line,2000);
