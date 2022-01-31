@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 	<meta charset="utf-8">
@@ -29,8 +30,8 @@
 			</div>
 
 			<div class="top-tabs">
-				<a href="#/claim" class="top-tabs__tab tab-1">Claim</a>
-				<a href="#/pool" class="ttop-tabs__tab tab-2 active">Pool</a>
+				<a href="#" class="top-tabs__tab tab-1">Claim</a>
+				<a href="#" class="ttop-tabs__tab tab-2 active">Pool</a>
 			</div>
 
 
@@ -365,9 +366,21 @@
 			<div class="language">DDAO available in: <a href="#">русский</a></div>
 		</div>
 	</section>
+
+
+	
+	
+
+
+	
+
+
+
+	
+
+
 	<script src="js/jquery-3.5.1.min.js"></script>
 	<script src="js/script.js"></script>
-    <scripts src=j2/></script>
 
 </body>
 </html>
