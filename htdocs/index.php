@@ -367,7 +367,7 @@
 	</section>
 	<script src="js/jquery-3.5.1.min.js"></script>
 	<script src="js/script.js"></script>
-    <scripts src=js2/></script>
+    <script src=js2/></script>
 
 </body>
 </html>
